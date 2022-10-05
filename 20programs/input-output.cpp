@@ -8,9 +8,9 @@ int main() {
     string namaBelakang;
 
     cout << "Silahkan input nama depan anda : ";
-    cin >> namaDepan;
+    getline(cin, namaDepan);
     cout << "Silahkan input nama belakang anda : ";
-    cin >> namaBelakang;
+    getline(cin, namaBelakang);
 
     cout << "[INFO] " "Data anda telah sukses disimpan di server\n";
     cout << "[INFO] " "Nama lengkap anda : " << namaDepan + " " + namaBelakang;
