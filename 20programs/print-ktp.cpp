@@ -11,6 +11,8 @@ int main() {
     cout << endl; cout << "---------------------------Pendataan KTP---------------------------"; cout << endl;
     cout << "Masukkan NIK\t\t\t: ";
     getline(cin, NIK);
+    cout << "Masukkan Nama\t\t\t: ";
+    getline(cin, nama);
     cout << "Masukkan tempat lahir\t\t: ";
     getline(cin, tempatLahir);
     cout << "Masukkan tanggal lahir\t\t: ";
