@@ -1,3 +1,7 @@
+// Copyright © 2022 Rill
+// My progress learning on c++
+// Follow me on twitter : https://twitter.com/rill_blastmith
+
 #include <iostream>
 #define phi 3.14
 #define phiOther float(22)/float(7)
