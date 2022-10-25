@@ -1,37 +1,70 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main() {
-    int umur;
+    const string replyButton = "  >> ";
+    const string prompt = " [y/n]";
+    int angka;
+    char jawaban;
 
-    printf("This program use nested if.\n");
-    printf("Masukkan umur : ");
-    cin >> umur;
+    cout << "Pilih angka 1-8 : ";
+    cin >> angka;
 
-    if (umur <= 60) {
-        if (umur < 12) {
-            if (umur <= 3) {
-                cout << "Anda batita" << endl;
-                cout << "Minum vitamin 1x sehari." << endl;
-            } else if (umur <= 5) {
-                cout << "Anda balita" << endl;
-                cout << "Minum vitamin 1x sehari." << endl;
-            } else {
-                cout << "Anda anak-anak" << endl;
-                cout << "Minum vitamin 2x sehari." << endl;
+    // here we go again
+    cout << "Apakah angka kurang dari 5 ?" << prompt << endl;
+    cout << replyButton;
+    cin >> jawaban;
+    if (toupper(jawaban) == 'Y') { // 1,2,3,4
+        cout << "Apakah angka kurang dari 3 ?" << prompt << endl;
+        cout << replyButton;
+        cin >> jawaban;
+        if (toupper(jawaban) == 'Y') { // 1,2
+            cout << "Apakah angka kurang dari 2 ?" << prompt << endl;
+            cout << replyButton;
+            cin >> jawaban;
+            if (toupper(jawaban) == 'Y') { // 1
+                cout << "Angka = 1";
+            } else { // 2
+                cout << "Angka = 2";
             }
-        } else if (umur >= 12) {
-            if (umur <= 17) {
-                cout << "Anda remaja" << endl;
-                cout << "Minum vitamin 2x sehari." << endl;
-            } else {
-                cout << "Anda dewasa" << endl;
-                cout << "Minum vitamin 3x sehari." << endl;
+        } else { // 3,4
+            cout << "Apakah angka kurang dari 4 ?" << prompt << endl;
+            cout << replyButton;
+            cin >> jawaban;
+            if (toupper(jawaban) == 'Y') { // 3
+                cout << "Angka = 3";
+            } else { // 4
+                cout << "Angka = 4";
             }
         }
-    } else {
-        cout << "Yo! Grandpa/Grandma xD" << endl;
-        cout << "Vitamin tidak untuk umur 60 atau lebih." << endl;
+    } else { // 5,6,7,8
+        cout << "Apakah angka kurang dari 8 ?" << prompt << endl;
+        cout << replyButton;
+        cin >> jawaban;
+        if (toupper(jawaban) == 'Y') { // 5,6,7,8
+            cout << "Apakah angka kurang dari 7 ?" << prompt << endl;
+            cout << replyButton;
+            cin >> jawaban;
+            if (toupper(jawaban) == 'Y') { // 5,6
+                cout << "Apakah angka kurang dari 6 ?" << prompt << endl;
+                cout << replyButton;
+                cin >> jawaban;
+                if (toupper(jawaban) == 'Y') { // 5
+                    cout << "Angka = 5";
+                } else { // 6
+                    cout << "Angka = 6";
+                }
+            } else { // 7,8
+                cout << "Apakah angka kurang dari 8 ?" << prompt << endl;
+                cout << replyButton;
+                cin >> jawaban;
+                if (toupper(jawaban) == 'Y') { //7
+                    cout << "Angka = 7";
+                } else { // 8
+                    cout << "Angka = 8";
+                }
+            }
+        }
     }
 }
