@@ -9,6 +9,7 @@ using namespace std;
 int main() {
     int waktu, detik, menit, jam, waktuTemp;
 
+    cout << "Program untuk konversi detik ke jam-menit-detik."
     cout << "Masukkan waktu dalam detik yang akan dikonversi : ";
     cin >> waktu;
 
