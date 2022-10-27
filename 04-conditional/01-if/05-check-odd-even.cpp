@@ -1,3 +1,7 @@
+// Copyright © 2022 Rill
+// My progress learning on c++
+// Follow me on twitter : https://twitter.com/rill_blastmith
+
 #include <iostream>
 
 using namespace std;
@@ -9,13 +13,16 @@ int main() {
     printf("Masukkan angka : ");
     cin >> angka;
 
-    if (angka & 1) {
-        printf("Angka tersebut ganjil\n");
-    } else {
-        printf("Angka tersebut genap\n");
-    }
+    string hasil = (angka & 1) ? "Angka tersebut ganjil" : "Angka tersebut genap";
+    cout << hasil << endl;
 
     // Alternate
+    // if (angka & 1) {
+    //     printf("Angka tersebut ganjil\n");
+    // } else {
+    //     printf("Angka tersebut genap\n");
+    // }
+
     // bool angkaBool;
     // if (angkaBool = ((angka%2)==1)) {
     //     printf("Angka tersebut ganjil\n");
