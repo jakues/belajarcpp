@@ -1,6 +1,6 @@
 // Written by Rill @ jakues.github.io
 #include <iostream>
-#define phi 22/7
+#define phi 22./7
 
 using namespace std;
 

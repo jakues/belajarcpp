@@ -25,7 +25,7 @@ int main() {
     } else {
         for (i = 1; i <= max; i++) {
             for (j = 1; j <= max-i; j++) {
-                printf("-");
+                printf(" ");
             }
             for (k = 1; k <= i; k++) {
                 printf("%i", k);
@@ -34,7 +34,7 @@ int main() {
         }
         for (i = 1; i <= max-1; i++) {
             for (j = 1; j <= i; j++) {
-                printf("-");
+                printf(" ");
             }
             for (k = 1; k <= max-i; k++) {
                 printf("%i", k);

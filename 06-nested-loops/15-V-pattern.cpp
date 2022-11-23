@@ -29,7 +29,7 @@ int main() {
                 }
             }
             for (j = 0; j < max; j++) {
-                if (j == max-1-i) {
+                if (j == (max-1-i)) {
                     printf("%c", alphabet+j);
                 } else {
                     printf(" ");
