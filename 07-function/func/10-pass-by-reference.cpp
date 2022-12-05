@@ -2,16 +2,33 @@
 
 using namespace std;
 
-void persegi(int &a);
+void tukar(int &x, int &y);
 
-int main() {
-    // this is pass by reference (var a as reference)
-    int sisi = 5;
-    persegi(sisi);
-    // this pass by value wont work
-    //persegi(4);
+void hasil(int &x, int &y) {
+    printf("a = %d\n", x);
+    printf("b = %d\n", y);
 }
 
-void persegi(int &a) {
-    printf("Luas persegi --> %d", a*a);
+int main() {
+    int a = 1;
+    int b = 2;
+    printf("Input a : ");
+    cin >> a;
+    printf("Input b : ");
+    cin >> b;
+
+    printf("Before\n");
+    hasil(a, b);
+
+    printf("After\n");
+    // declare here
+    tukar(a, b);
+    hasil(a, b);
+}
+
+void tukar(int &x, int &y) {
+    int z;
+    z=x;
+    x=y;
+    y=z;
 }
