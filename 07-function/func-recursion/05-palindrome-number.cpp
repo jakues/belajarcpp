@@ -17,7 +17,7 @@ int main() {
     int n;
     bool isTrue;
     
-    printf("Palindrome Number\n");
+    printf("Palindrome Numbers\n");
     printf("Input angka : ");
     cin >> n;
 
