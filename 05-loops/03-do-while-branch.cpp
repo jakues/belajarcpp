@@ -18,13 +18,13 @@ int main() {
     // 7
     // 8
     // 9
-    // coz we print i then i will be 0 as we declared it by zero value
-    // if we print the code with i+1 then it will start from 0+1
+    // this same as while branch but the different is the structure of execution condition
+    // condition will be executed after code
 
-    int i; // same as i = 0
+    int i;
 
-    while (i < 10) {
+    do {
         cout << i << endl;
         i++;
-    }
+    } while (i < 10);
 }

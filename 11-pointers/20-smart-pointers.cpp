@@ -1,3 +1,7 @@
+// Copyright © 2022 Rill
+// Progress learning on c++
+// License : https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 #include <iostream>
 //reference https://en.cppreference.com/w/cpp/header/memory
 #include <memory>

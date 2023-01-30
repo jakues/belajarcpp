@@ -1,9 +1,12 @@
+// Copyright © 2022 Rill
+// Progress learning on c++
+// License : https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 #include <iostream>
 
 using namespace std;
 
 struct item {
-    int Id;
     string Name;
     int Price; 
 };
@@ -18,21 +21,18 @@ int main() {
     game list[3];
 
     list[0] = {
-        1,
         "Minecraft",
         200000,
         "sandbox"
     };
 
     list[1] = {
-        2,
         "Elden Ring",
         100000,
         "rpg"
     };
 
     list[2] = {
-        3,
         "X-com 2",
         10000,
         "strategy"
@@ -45,21 +45,20 @@ int main() {
 
     if (opt == "list") {
         for (int i=0; i < 3; i++) {
-            printf("#%d: \"%s\"\t (%s)\t%d\n", list[i].gameItem.Id, data(list[i].gameItem.Name), data(list[i].genre), list[i].gameItem.Price);
+            printf("#%d: \"%s\"\t (%s)\t%d\n", i+1, data(list[i].gameItem.Name), data(list[i].genre), list[i].gameItem.Price);
         }
     } else if (opt == "id") {
         int n;
         printf("Input id > ");
         cin>> n;
-        
-        if (n == 1) {
-            printf("#%d: \"%s\"\t (%s)\t%d\n", list[0].gameItem.Id, data(list[0].gameItem.Name), data(list[0].genre), list[0].gameItem.Price);
-        } else if (n == 2) {
-            printf("#%d: \"%s\"\t (%s)\t%d\n", list[1].gameItem.Id, data(list[1].gameItem.Name), data(list[1].genre), list[1].gameItem.Price);
-        } else if (n == 3) {
-            printf("#%d: \"%s\"\t (%s)\t%d\n", list[2].gameItem.Id, data(list[2].gameItem.Name), data(list[2].genre), list[2].gameItem.Price);
-        } else {
-            printf("Wrong id");
+
+        for (int i=0; i < 3; i++) {
+            if (n-1 == i) {
+                printf("#%d: \"%s\"\t (%s)\t%d\n", i+1, data(list[i].gameItem.Name), data(list[i].genre), list[i].gameItem.Price);
+                return 0;
+            } else {
+                printf("Wrong id\n");
+            }
         }
     } else if (opt == "quit") {
         printf("bye");

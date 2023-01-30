@@ -1,7 +1,6 @@
 // Copyright © 2022 Rill
-// My progress learning on c++
+// Progress learning on c++
 // License : https://creativecommons.org/licenses/by-nc-sa/4.0/
-// Follow me on twitter : https://twitter.com/rill_blastmith
 
 #include <iostream>
 #ifdef _WIN32
@@ -11,6 +10,22 @@
 #endif
 
 using namespace std;
+
+void cls() {
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
+}
+
+void slp(int n) {
+    #ifdef _WIN32
+        Sleep(n);
+    #else
+        sleep(n);
+    #endif
+}
 
 int main() {
     int i, j, time;
@@ -23,24 +38,24 @@ int main() {
         cin >> time;
 
         for (i = time; i >= 0; i--) {
-            system("cls");
+            cls();
             printf("%i", i);
-            Sleep(1100);
+            slp(1100);
             if (i == 0) {
-                Sleep(1500);
-                system("cls");
+                slp(1500);
+                cls();
                 // beep 5x
                 for (j = 1; j <= 5; j++) {
                     printf("beep ");
-                    Sleep(1500);
+                    slp(1500);
                 }
             }
         }
 
         // user prompt
-        system("cls");
+        cls();
         printf("Afh anda ingin menggunakan timer lagi ? [y/n] ?\n");
         printf("--> ");
-        cin >> pilihan;
+            cin >> pilihan;
     } while (toupper(pilihan) == 'Y');
 }

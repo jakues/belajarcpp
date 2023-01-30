@@ -1,8 +1,13 @@
+// Copyright © 2022 Rill
+// Progress learning on c++
+// License : https://creativecommons.org/licenses/by-nc-sa/4.0/
+
 #include <iostream> // std::cout
 #include <fstream>  // std::fstream
 #include <iomanip>  // std::setw
 #include <string>   // std::string
 #include <vector>   // std::vector
+#include <cerrno>
 #ifdef _WIN32       // case windows OS
 #include <windows.system.h>
 #else
@@ -42,20 +47,28 @@ void modifyById(struct Record update);
 
 void cls() {
     #ifdef _WIN32
-    system("cls");
+        system("cls");
     #else
-    system("clear");
+        system("clear");
     #endif
 }
 
-void pause() {
+void ps() {
     #ifdef _WIN32
-    printf("%s ", data(msg.notifInfo));
-    system("pause");
+        printf("%s ", data(msg.notifInfo));
+        system("pause");
     #else
-    printf("%s Press any key to continue . . .", data(msg.notifInfo));
-    cin.get();
-    cin.get();
+        printf("%s Press any key to continue . . .", data(msg.notifInfo));
+        cin.get();
+        cin.get();
+    #endif
+}
+
+void slp(int n) {
+    #ifdef _WIN32
+        Sleep(n);
+    #else
+        sleep(n);
     #endif
 }
 
@@ -82,7 +95,7 @@ int main() {
         switch (opt) {
         case 1:
             inputData(db);
-            pause();
+            ps();
             cls();
             break;
         case 2:
@@ -90,28 +103,28 @@ int main() {
             break;
         case 3:
             searchData();
-            pause();
+            ps();
             cls();
             break;
         case 4:
             modifyData();
-            pause();
+            ps();
             cls();
             break;
         case 5:
             deleteData();
-            pause();
+            ps();
             cls();
             break;
         case 6:
             cls();
             printf("%s Good Bye !\n", data(msg.notifInfo));
-            pause();
+            ps();
             exit(0);
             break;
         default:
             printf("%s Invalid choice\n", data(msg.notifInvalid));
-            pause();
+            ps();
             cls();
             break;
         }
@@ -159,14 +172,14 @@ void inputData(struct Record add) {
     } while(true);
     
     printf("%s Menambah Data . . .\n", data(msg.notifInfo));
-    Sleep(1500);
+    slp(1500);
     addData(add);
     // Case err when add data
-    if (addData != ERROR) {
-        printf("%s Berhasil Menambah Data\n", data(msg.notifInfo));
-    } else {
-        printf("%s Gagal Menambah Data\n", data(msg.notifInvalid));
-    }
+    // if (addData != err) {
+    //     printf("%s Berhasil Menambah Data\n", data(msg.notifInfo));
+    // } else {
+    //     printf("%s Gagal Menambah Data\n", data(msg.notifInvalid));
+    // }
 }
 
 void initializeData(struct Record add) {
@@ -243,7 +256,7 @@ void showData() {
     if (read.is_open()) {
         switch (opt) {
         case 1:
-            pause();
+            ps();
             cls();
             while (getline(read, temp)) {
                 cout << temp << endl;
@@ -376,7 +389,7 @@ void deleteByLine(struct Record del) {
     }
 
     printf("%s Menghapus data #%i . . . \n", data(msg.notifInfo), num);
-    Sleep(1500);
+    slp(1500);
     
     read.close();
 
@@ -402,7 +415,7 @@ void deleteAll() {
         printf("%s Menghapus Semua Data . . .\n", data(msg.notifInfo));
         fstream db("data.txt", ios::out | ios::trunc);
         db.close();
-        Sleep(1500);
+        slp(1500);
         printf("%s Berhasil Menghapus Semua Data\n", data(msg.notifInfo));
     } else {
         return;
