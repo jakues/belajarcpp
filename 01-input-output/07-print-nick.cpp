@@ -7,9 +7,14 @@
 using namespace std;
 
 int main() {
-    int angka;
+    char name[15];
 
-    cout << "Masukkan angka : ";
-    cin >> angka;
-    cout << "Angka : " << angka;
+    cout << "Input ur name : ";
+    cin.read(name, 5);
+
+    cout<< "Hi "
+        << name
+        << " ! "
+        << "Apa kabar ?"
+        << endl;
 }

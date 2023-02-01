@@ -3,13 +3,15 @@
 // License : https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 #include <iostream>
-
+// to prevent use namespace std::
+// use this code
 using namespace std;
 
 int main() {
-    char nama[30]; // to use string on scanf need to use char datatype
+    int n;
 
-    printf("Input ur name : ");
-    scanf("%s", nama);
-    printf("Ur name : %s", nama);
+    cout << "Input number : ";
+    cin >> n;
+
+    cout << "Number : " << n;
 }

@@ -7,24 +7,23 @@
 using namespace std;
 
 int main() {
-    string tanggal;
+    // Input and output should be like :
+    // Monday, 12-31-2022
+
+    string date;
 
     // This code will print string on first word
     // cin method can't read 2 argument or more
     
-    // cout << "=====cin method=====" << endl;
-    // cout << "Masukkan hari dan tanggal" << endl;
-    // cout << "Contoh : Minggu, 9 Oktober 2022" << endl;
-    // cout << "-> ";
-    // cin >> tanggal;
-    // cout << tanggal;
+    // cout << "===== cin method =====" << endl;
+    // cout << "Input date : ";
+    // cin >> date;
+    // cout << date;
 
     // To prevent it u can use getline(cin, variableName)
     // Lets try
-    cout << "=====getline method=====" << endl;
-    cout << "Masukkan hari dan tanggal" << endl;
-    cout << "Contoh : Minggu, 9 Oktober 2022" << endl;
-    cout << "-> ";
-    getline(cin, tanggal);
-    cout << tanggal;
+    cout << "===== getline method =====" << endl;
+    cout << "Input date : ";
+    getline(cin, date);
+    cout << date;
 }

@@ -7,9 +7,13 @@
 using namespace std;
 
 int main() {
-    char nama[30]; // to use string on scanf need to use char datatype
+    char name[30];
 
-    printf("Input ur name : ");
-    scanf("%s", nama);
-    printf("Ur name : %s", nama);
+    cout << "Input name :  ";
+    cin.read(name, 10);
+
+    
+    cout<< "Ur First Name : "
+        << name
+        << endl;
 }

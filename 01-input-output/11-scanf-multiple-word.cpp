@@ -7,9 +7,12 @@
 using namespace std;
 
 int main() {
-    char fakultas[50];
+    char word[50];
 
-    printf("Masukkan fakultas anda : ");
-    scanf("%[^\n]", fakultas); // [^\n] ^ merupakan negasi dari line feed itu agar variabel inputan dengan spasi dapat terbaca
-    printf("Fakultas anda : %s", fakultas);
+    printf("Input 2 word or more : ");
+    // [^\n] is line feed negation
+    // to read 2 word or more var char type data
+    scanf("%[^\n]", word);
+
+    printf("Word : %s\n", word);
 }

@@ -7,8 +7,8 @@
 using namespace std;
 
 int main() {
-    // try to uncomment code below
-    // cout << "Masukkan hari : ";
-    // cin >> hari; // error coz variable not declared first
-    // string hari;
+    // Try to uncomment code below
+    // cout << "Input some text : ";
+    // cin >> text; // error coz variable not declared first
+    // string text;
 }

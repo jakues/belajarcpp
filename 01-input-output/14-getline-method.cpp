@@ -7,11 +7,13 @@
 using namespace std;
 
 int main() {
-    string varExample;
+    string word;
 
-    for(;;) { // using for() coz to repeat the jobs without any reason xD
-        cout << "Masukkan kata : ";
-        getline(cin, varExample);
-        cout << "Kata yang dimasukkan : " << varExample << endl;
-    }
+    printf("Input word : ");
+    getline(cin, word);
+
+    printf(
+        "Word : %s\n",
+        word.c_str()
+    );
 }
