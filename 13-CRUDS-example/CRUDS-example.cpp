@@ -354,8 +354,7 @@ void deleteData() {
 }
 
 void deleteByLine(struct Record del) {
-    int num, offset;
-    char opt;
+    int num;
 
     printf("%s Masukkan nomor >> #", data(msg.notifInfo));
         cin >> num;

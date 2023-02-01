@@ -29,7 +29,7 @@ void slp(int n) {
 
 int main() {
     int i, j, time;
-    char pilihan, opt;
+    char opt;
 
     do {
         time = 0;
@@ -56,6 +56,6 @@ int main() {
         cls();
         printf("Afh anda ingin menggunakan timer lagi ? [y/n] ?\n");
         printf("--> ");
-            cin >> pilihan;
-    } while (toupper(pilihan) == 'Y');
+            cin >> opt;
+    } while (toupper(opt) == 'Y');
 }

@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "run",
+            "dependsOn": ["build"],
+            "program": "$PROJECT_DIR$/solution",
+        },
+        {
+            "type": "command",
+            "name": "build",
+            "program": "/usr/bin/clang++",
+            "args": ["$FILE$", "-Wall", "-std=c++17", "-o", ""],
+
+        },
+    ]
+}
