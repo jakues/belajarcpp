@@ -1,7 +1,9 @@
 <h1 align="center">Learn C++</h1>
 
 ---
- <img src="assets/images/cpp-logo.png" alt="cpp logo" class="center"> 
+ <h2 align="center"> 
+    <img src="assets/images/cpp-logo.png" alt="cpp logo"> 
+</h2>
 
 ---
 
